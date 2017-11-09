@@ -1,0 +1,24 @@
+{
+    "user1": "Stefan",
+    "user2": "Tom",
+    "task1": "coding",
+    "aString": ["string1", "string2"],
+    "aBool": [true, false],
+    "aInt": [0, 1, 2],
+    "aDouble": [0.1, 1.2],
+    "int": 0,
+    "bool": true,
+    "double": 13.506,
+    "nest": {
+        "foo": "bla",
+        "nest1": {
+            "foo1": "bla",
+            "nest2": {
+                "string": "bla",
+                "int": 12,
+                "double": 25.5565,
+                "bool": false
+            }
+        }
+    }
+}
