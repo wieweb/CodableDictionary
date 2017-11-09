@@ -25,7 +25,7 @@ let encodedData: Data = try! JSONEncoder().encode(dict)
 let jsonString = String(data: encodedData, encoding: .utf8)
 ```
 
-Encoding of custom models is also supported. So you can simply wrap models into an dictionary.
+Encoding of custom models is also supported. So you can simply wrap models into a dictionary.
 
 ```swift
 struct User: Codable {
