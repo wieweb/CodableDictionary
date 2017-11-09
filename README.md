@@ -9,7 +9,7 @@ Struct to make simple `[String: Any]` dictionaries conform to `Codable`.
 
 ### Decoding
 
-```
+```swift
 let data1: Data = try! Data(contentsOf: Bundle.main.url(forResource: "test", withExtension: "json")!)
 let dict = try? JSONDecoder().decode(CodableDictionary.self, from: data)
 let name = dict?["name"]
@@ -19,7 +19,7 @@ let name = dict?["name"]
 
 `CodableDictionary` can be initialised with [String: Any].
 
-```
+```swift
 let dict = CodableDictionary(value: ["foor": 233, "nested": ["n1": "hallo", "n2": "welt", "nested": ["n1": "hallo", "n2": "welt"]]])
 let encodedData: Data = try! JSONEncoder().encode(dict)
 let jsonString = String(data: encodedData, encoding: .utf8)
@@ -27,7 +27,7 @@ let jsonString = String(data: encodedData, encoding: .utf8)
 
 Encoding of custom models is also supported. So you can simply wrap models into an dictionary.
 
-```
+```swift
 struct User: Codable {
 	let name: String
 }
@@ -50,7 +50,7 @@ let jsonString = String(data: encodedData, encoding: .utf8)
 Since `CodableDictionary` has to know the type of model which has to be decoded/encoded, `Any` has to be one of the following types:
 
 | supported types of Any | 
-| ------------- | ----------------- |
+| ------------- |
 | String, [String] | 
 | Bool, [Bool] | 
 | Int, [Int] | 
